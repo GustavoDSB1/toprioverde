@@ -179,19 +179,6 @@ p { margin: 0; }
 .hero__inner {
   display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center;
 }
-.badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 8px 16px 8px 12px; border-radius: 999px;
-  background: rgba(30,139,255,.1); border: 1px solid rgba(30,139,255,.35);
-  font-size: 13px; color: #cfe0ff; letter-spacing: .02em;
-}
-.badge strong { color: #fff; }
-.badge__dot {
-  width: 8px; height: 8px; border-radius: 50%; background: #3fc3ff;
-  box-shadow: 0 0 0 0 rgba(63,195,255,.7); animation: pulse 2s infinite;
-}
-@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(63,195,255,0); } 100% { box-shadow: 0 0 0 0 rgba(63,195,255,0); } }
-
 .hero__title {
   margin: 22px 0 22px;
   font-size: clamp(42px, 5.6vw, 78px);
@@ -214,6 +201,22 @@ p { margin: 0; }
   background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero__stats span { display: block; margin-top: 6px; font-size: 13px; color: var(--muted); max-width: 150px; line-height: 1.35; }
+
+/* ---------- Selo oficial "Correspondente autorizado Banco Daycoval" ----------
+   Arte oficial do banco: usada sem alterar cores/proporções, sempre sobre fundo branco. */
+.corr {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 14px 34px -14px rgba(0, 10, 60, .8);
+}
+.corr img { display: block; width: auto; }
+.corr--hero img { height: 64px; }
+.chip.corr--chip { padding: 0; gap: 0; border: 0; backdrop-filter: none; background: #fff; }
+.corr--chip img { height: 58px; }
+.corr--partner { display: flex; width: fit-content; margin-top: 12px; }
+.corr--partner img { height: 96px; }
+.corr--footer { display: flex; width: fit-content; margin-top: 20px; border-radius: 12px; }
+.corr--footer img { height: 60px; }
 
 /* ---------- Emblema ---------- */
 .emblem {
@@ -390,8 +393,6 @@ p { margin: 0; }
   background: linear-gradient(90deg, rgba(30,139,255,.08), rgba(255,255,255,.02), rgba(30,139,255,.08));
 }
 .partner__seal { color: var(--cyan); filter: drop-shadow(0 0 14px rgba(63,195,255,.5)); }
-.partner__text { font-family: var(--font-display); font-size: clamp(20px, 2.6vw, 30px); font-weight: 600; margin-top: 4px; }
-.partner__text strong { font-weight: 900; font-style: italic; }
 
 /* FAQ */
 .faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
@@ -535,6 +536,9 @@ p { margin: 0; }
   .chip__ic { width: 30px; height: 30px; }
   .chip--1, .chip--3 { left: 0; }
   .chip--2, .chip--4 { right: 0; }
+  .corr--chip img { height: 44px; }
+  .corr--hero img { height: 52px; }
+  .corr--partner img { height: 80px; }
   .section { padding: 90px 0; }
   .services, .perks { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
