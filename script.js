@@ -17,6 +17,19 @@ document.querySelectorAll(".js-whatsapp").forEach((a) => {
   a.rel = "noopener";
 });
 document.getElementById("instagramLink").href = CONFIG.instagram;
+
+// ---------- Eventos para o Google Tag Manager (conversões do Google Ads) ----------
+// Cada clique no WhatsApp envia o evento "clique_whatsapp" com o local do botão.
+// No GTM: acionador "Evento personalizado" = clique_whatsapp.
+window.dataLayer = window.dataLayer || [];
+document.querySelectorAll(".js-whatsapp").forEach((a) =>
+  a.addEventListener("click", () =>
+    window.dataLayer.push({ event: "clique_whatsapp", local_do_botao: a.dataset.local || "outro" })
+  )
+);
+document.getElementById("instagramLink").addEventListener("click", () =>
+  window.dataLayer.push({ event: "clique_instagram" })
+);
 document.getElementById("ano").textContent = new Date().getFullYear();
 
 // ---------- Header ao rolar ----------

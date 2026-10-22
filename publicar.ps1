@@ -7,7 +7,7 @@ $origem  = $PSScriptRoot
 $destino = Join-Path $env:TEMP "toprioverde-deploy"
 
 # Lista explícita do que vai para a internet (allowlist)
-$arquivos = @("index.html", "styles.css", "script.js", "_headers", "assets")
+$arquivos = @("index.html", "styles.css", "script.js", "gtm.js", "_headers", "assets")
 
 if (Test-Path $destino) { Remove-Item $destino -Recurse -Force }
 $destino = (New-Item -ItemType Directory $destino).FullName

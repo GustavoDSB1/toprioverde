@@ -12,6 +12,7 @@ refinanciamento e carros novos e usados. Correspondente autorizado Banco Daycova
 | `index.html` | Página |
 | `styles.css` | Visual e responsividade |
 | `script.js` | Menu, animações e links de WhatsApp/Instagram (bloco `CONFIG` no topo) |
+| `gtm.js` | Google Tag Manager (GTM-N35N8RJ7) |
 | `assets/` | Logos em SVG |
 | `_headers` | Cabeçalhos de segurança do Cloudflare Pages |
 | `publicar.ps1` | Publica o site no Cloudflare Pages |
